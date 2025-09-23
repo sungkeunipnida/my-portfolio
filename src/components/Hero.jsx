@@ -14,8 +14,11 @@ function Hero() {
       id="home"
       className="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white relative"
     >
-      <h2 className="text-4xl md:text-6xl font-bold">안녕하세요 👋</h2>
-      <p className="mt-4 text-lg md:text-2xl">저는 웹 개발자 지망생입니다.</p>
+      <h2 className="text-4xl md:text-6xl font-bold">こんにちは</h2>
+      <p className="mt-4 text-lg md:text-2xl">
+        わざわざ開いてくださってありがとうございます。
+        <br /> LEE SUNG KEUN （イ・ソングン）と申します。
+      </p>
 
       {/* 스크롤 유도 아이콘 */}
       <button
