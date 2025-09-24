@@ -7,7 +7,7 @@ function About() {
       </h2>
 
       {/* 소개 문장 */}
-      <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
+      <p className="text-lg sm:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto">
         私ソフトウェア工学を複数専攻し、フルスタック開発を目処にしています。
         <br />
         本webはReactとTailwind
