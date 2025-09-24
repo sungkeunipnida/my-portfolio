@@ -8,7 +8,7 @@ function Projects() {
         >
           <h3 className="text-2xl font-semibold mb-4">Project {id}</h3>
           <p className="text-gray-700 flex-1">一生懸命作業中です。</p>
-          <button className="mt-6 bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-700 hover:scale-105 transition">
+          <button className="mt-6 bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800 hover:scale-105 transition">
             Projectへ
           </button>
         </div>
