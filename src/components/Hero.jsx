@@ -12,7 +12,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-800 to-gray-100 text-white relative pt-[env(safe-area-inset-top)]"
+      className="h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-800 to-gray-100 text-white relative"
     >
       <h2 className="text-4xl md:text-6xl font-bold">こんにちは</h2>
       <p className="mt-4 text-lg md:text-2xl">
