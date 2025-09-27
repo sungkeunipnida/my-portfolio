@@ -1,21 +1,16 @@
+// 새 빌드가 있으면 기존 워커 무시하고 즉시 교체
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open("portfolio-cache-v1").then((cache) => {
-      return cache.addAll([
-        "/",
-        "/index.html",
-        "/logo_s_192x192-v2.png",
-        "/logo_s_512x512-v2.png",
-        "/apple-touch-icon-v2.png",
-      ]);
-    })
-  );
+  self.skipWaiting();
 });
 
+// 새 워커가 모든 탭/창에 바로 적용되도록
+self.addEventListener("activate", (event) => {
+  event.waitUntil(clients.claim());
+});
+
+// 네트워크 우선 전략 (항상 최신 파일 불러오기)
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
-    })
+    fetch(event.request).catch(() => caches.match(event.request))
   );
 });
