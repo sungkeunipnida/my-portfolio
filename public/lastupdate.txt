@@ -1,1 +1,18 @@
+2025-09-28 03:05 | addUpdateInfo, semanticLayout
 2025-09-28 00:05 | ico
+2025-09-27 23:53 | pwa
+2025-09-27 23:27 | addATI5
+2025-09-27 23:18 | addAppleTouchIcon3
+2025-09-27 23:13 | addAppleTouchIcon3
+2025-09-27 23:03 | addAppleTouchIcon2
+2025-09-27 22:56 | addAppleTouchIcon
+2025-09-25 13:19 | editing_favicon2
+2025-09-25 12:47 | editing_favicon
+2025-09-24 17:14 | favicon
+2025-09-24 16:47 | ios top color rollback
+2025-09-24 16:31 | ios top color
+2025-09-24 16:24 | text, ios top color, background color
+2025-09-23 19:06 | headerText
+2025-09-23 18:57 | text
+2025-09-23 17:32 | text
+2025-09-23 16:06 | chore: initial commit
