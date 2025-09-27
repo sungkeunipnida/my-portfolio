@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "lastupdate": "git log --format='%cd | %s' --date=format:'%Y-%m-%d %H:%M' > public/lastupdate.txt",
+    "dev": "pnpm run lastupdate && vite",
+    "build": "pnpm run lastupdate && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

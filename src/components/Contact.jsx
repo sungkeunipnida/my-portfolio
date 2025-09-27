@@ -1,10 +1,22 @@
 function Contact() {
   return (
-    <section id="contact" className="p-8 md:p-16 bg-gray-100">
-      <h2 className="text-2xl font-bold mb-4">Contact</h2>
-      <p>📧 Email: iorumer@gmail.com</p>
-      <p>💻 GitHub: github.com/sungkeunipnida</p>
-    </section>
+    <div className="text-center scroll-mt-20">
+      <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-800">
+        Contact
+      </h2>
+      <p className="mb-2">📧 Email: iorumer@gmail.com</p>
+      <p>
+        💻 GitHub:{" "}
+        <a
+          href="https://github.com/sungkeunipnida"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline"
+        >
+          github.com/sungkeunipnida
+        </a>
+      </p>
+    </div>
   );
 }
 
