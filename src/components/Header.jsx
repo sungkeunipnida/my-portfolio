@@ -27,7 +27,7 @@ function Header() {
       }`}
     >
       <h1 className="text-xl font-bold">sungkeun</h1>
-      <nav className="space-x-4">
+      <nav className="space-x-5">
         <a href="#home" className="hover:text-blue-400">
           Home
         </a>
@@ -36,6 +36,9 @@ function Header() {
         </a>
         <a href="#projects" className="hover:text-blue-400">
           Projects
+        </a>
+        <a href="#update-info" className="hover:text-blue-400">
+          Update Info
         </a>
         <a href="#contact" className="hover:text-blue-400">
           Contact

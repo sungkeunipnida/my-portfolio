@@ -16,8 +16,8 @@ function UpdateInfo() {
   return (
     <div className="text-center scroll-mt-20">
       {/* 제목 */}
-      <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
-        Project Info
+      <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-800">
+        Update Info
       </h2>
 
       {/* 로그 영역 (정사각형 박스) */}
