@@ -26,21 +26,25 @@ function Header() {
         showHeader ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <h1 className="text-xl font-bold">sungkeun</h1>
+      <h1 className="text-xl font-bold">
+        <a href="#home" className="text-gray-200 hover:text-white">
+          sungkeun
+        </a>
+      </h1>
       <nav className="space-x-5">
-        <a href="#home" className="hover:text-blue-400">
+        <a href="#home" className="text-gray-200 hover:text-white">
           Home
         </a>
-        <a href="#about" className="hover:text-blue-400">
+        <a href="#about" className="text-gray-200 hover:text-white">
           About
         </a>
-        <a href="#projects" className="hover:text-blue-400">
+        <a href="#projects" className="text-gray-200 hover:text-white">
           Projects
         </a>
-        <a href="#update-info" className="hover:text-blue-400">
+        <a href="#update-info" className="text-gray-200 hover:text-white">
           Update Info
         </a>
-        <a href="#contact" className="hover:text-blue-400">
+        <a href="#contact" className="text-gray-200 hover:text-white">
           Contact
         </a>
       </nav>
