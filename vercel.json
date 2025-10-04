@@ -1,3 +1,8 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "rewrites": [
+    {
+      "source": "/((?!manifest.json|favicon.*|logo.*|apple-touch-icon.*|robots.txt).*)",
+      "destination": "/"
+    }
+  ]
 }
