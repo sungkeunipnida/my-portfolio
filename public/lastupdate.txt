@@ -1,3 +1,5 @@
+2025-10-04 21:06 | remove .env from tracking
+2025-10-04 21:01 | gitignoreEnv
 2025-10-04 21:00 | ignoreEnv
 2025-10-04 20:57 | googleApi
 2025-09-29 14:02 | addHrefOnSungkeun
