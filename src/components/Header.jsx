@@ -32,9 +32,6 @@ function Header() {
         </a>
       </h1>
       <nav className="space-x-5">
-        <a href="#home" className="text-gray-200 hover:text-white">
-          Home
-        </a>
         <a href="#about" className="text-gray-200 hover:text-white">
           About
         </a>

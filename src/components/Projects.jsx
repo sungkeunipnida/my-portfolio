@@ -1,25 +1,36 @@
+import { Link } from "react-router-dom";
+
 function Projects() {
   return (
-    <div className="text-center scroll-mt-20">
-      {/* 제목 */}
-      <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-800">
+    <div>
+      <h2 className="text-center text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
         Projects
       </h2>
-
-      {/* 그리드 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {[1, 2, 3].map((id) => (
-          <div
-            key={id}
-            className="bg-gray-100 rounded-xl shadow-lg p-8 flex flex-col hover:shadow-xl transition"
-          >
-            <h3 className="text-2xl font-semibold mb-4">Project {id}</h3>
-            <p className="text-gray-700 flex-1">一生懸命作業中です。</p>
-            <button className="mt-6 bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800 hover:scale-105 transition">
-              Projectへ
-            </button>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 프로젝트 1 */}
+        <Link
+          to="/projects/project1"
+          className="p-6 rounded-2xl shadow-lg bg-white hover:scale-105 transition flex flex-col justify-between"
+        >
+          <div>
+            <h3 className="text-xl font-semibold">Project 1</h3>
+            <p className="mt-2 text-gray-600">Google Maps API 활용</p>
           </div>
-        ))}
+        </Link>
+
+        {/* 프로젝트 2 (작업 중) */}
+        <div className="p-6 rounded-2xl shadow-lg bg-gray-200 hover:scale-105 transition flex text-gray-500 flex flex-col justify-between">
+          <div>
+            <h3 className="text-xl font-semibold">Project 2</h3>
+            <p className="mt-2">一生懸命作業中・・・</p>
+          </div>
+        </div>
+        <div className="p-6 rounded-2xl shadow-lg bg-gray-200 hover:scale-105 transition flex text-gray-500 flex flex-col justify-between">
+          <div>
+            <h3 className="text-xl font-semibold">Project ３</h3>
+            <p className="mt-2">一生懸命作業中・・・</p>
+          </div>
+        </div>
       </div>
     </div>
   );
