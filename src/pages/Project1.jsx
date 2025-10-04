@@ -1,10 +1,15 @@
 // src/pages/Project1.jsx
-import { GoogleMap, Marker, InfoWindow } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  LoadScript,
+  Marker,
+  InfoWindow,
+} from "@react-google-maps/api";
 import { useState, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
 
-const center = { lat: 35.6895, lng: 139.6917 };
-const tsukishimaStation = { lat: 35.66442, lng: 139.7848 };
+const center = { lat: 35.6895, lng: 139.6917 }; // 도쿄 기본
+const tsukishimaStation = { lat: 35.66442, lng: 139.7848 }; // 월島駅 좌표
 
 function Project1() {
   const [placeInfo, setPlaceInfo] = useState(null);
@@ -43,7 +48,7 @@ function Project1() {
               photos: results[0].photos,
               rating: results[0].rating,
             });
-            setShowInfo(true); // 버튼 클릭 시 InfoWindow 자동 표시
+            setShowInfo(true); // 버튼 클릭 시 InfoWindow 표시
           } else {
             console.error("Place search failed:", status);
           }
@@ -74,46 +79,53 @@ function Project1() {
 
         <div className="flex justify-center items-center w-full">
           <div className="w-[90%] h-[90vw] sm:w-[70%] sm:h-[70vw] md:w-[50%] md:h-[50vw] max-w-[600px] max-h-[600px]">
-            <GoogleMap
-              mapContainerStyle={{ width: "100%", height: "100%" }}
-              center={center}
-              zoom={12}
-              onLoad={onLoad}
+            <LoadScript
+              googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
+              libraries={["places"]}
             >
-              {/* 마커 */}
-              {showInfo && <Marker position={tsukishimaStation} />}
+              <GoogleMap
+                mapContainerStyle={{ width: "100%", height: "100%" }}
+                center={center}
+                zoom={12}
+                onLoad={onLoad}
+              >
+                {/* 마커 */}
+                {showInfo && <Marker position={tsukishimaStation} />}
 
-              {/* InfoWindow */}
-              {showInfo && placeInfo && (
-                <InfoWindow
-                  position={tsukishimaStation}
-                  onCloseClick={() => setShowInfo(false)}
-                >
-                  <div className="text-sm">
-                    <h2 className="font-bold">{placeInfo.name}</h2>
-                    <p>{placeInfo.formatted_address}</p>
+                {/* InfoWindow */}
+                {showInfo && placeInfo && (
+                  <InfoWindow
+                    position={tsukishimaStation}
+                    onCloseClick={() => setShowInfo(false)}
+                  >
+                    <div className="text-sm">
+                      <h2 className="font-bold">{placeInfo.name}</h2>
+                      <p>{placeInfo.formatted_address}</p>
 
-                    {/* 사진 안전 처리 */}
-                    {placeInfo.photos?.[0]?.photo_reference ? (
-                      <img
-                        src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=${
-                          placeInfo.photos[0].photo_reference
-                        }&key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}`}
-                        alt={placeInfo.name}
-                        className="mt-2 rounded"
-                      />
-                    ) : (
-                      <div className="mt-2 text-gray-500 italic">사진 없음</div>
-                    )}
+                      {/* 사진 안전 처리 */}
+                      {placeInfo.photos?.[0]?.photo_reference ? (
+                        <img
+                          src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=${
+                            placeInfo.photos[0].photo_reference
+                          }&key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}`}
+                          alt={placeInfo.name}
+                          className="mt-2 rounded"
+                        />
+                      ) : (
+                        <div className="mt-2 text-gray-500 italic">
+                          사진 없음
+                        </div>
+                      )}
 
-                    {/* 평점 */}
-                    {placeInfo.rating && (
-                      <p className="mt-1">⭐ {placeInfo.rating} / 5</p>
-                    )}
-                  </div>
-                </InfoWindow>
-              )}
-            </GoogleMap>
+                      {/* 평점 */}
+                      {placeInfo.rating && (
+                        <p className="mt-1">⭐ {placeInfo.rating} / 5</p>
+                      )}
+                    </div>
+                  </InfoWindow>
+                )}
+              </GoogleMap>
+            </LoadScript>
           </div>
         </div>
       </main>
