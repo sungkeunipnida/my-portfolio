@@ -113,7 +113,7 @@ function Project1() {
                         />
                       ) : (
                         <div className="mt-2 text-gray-500 italic">
-                          사진 없음
+                          写真なし
                         </div>
                       )}
 

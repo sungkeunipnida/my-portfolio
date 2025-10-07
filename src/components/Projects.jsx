@@ -14,7 +14,7 @@ function Projects() {
         >
           <div>
             <h3 className="text-xl font-semibold">Project 1</h3>
-            <p className="mt-2 text-gray-600">Google Maps API 활용</p>
+            <p className="mt-2 text-gray-600">Google Maps API 活用</p>
           </div>
         </Link>
 
